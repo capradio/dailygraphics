@@ -33,7 +33,7 @@ def deploy_file(src, dst, headers={}):
     file_headers = copy.copy(headers)
 
     if app_config.S3_BUCKET == app_config.STAGING_S3_BUCKET:
-        policy = 'private'
+        policy = 'public-read'
     else:
         policy = 'public-read'
 
